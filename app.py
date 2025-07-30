@@ -9,7 +9,18 @@ from keras.models import load_model
 from PIL import Image
 
 # Load the model and define labels
-model = load_model("best_model.h5")
+import os
+import gdown
+
+MODEL_PATH = "best_model.h5"
+GOOGLE_DRIVE_FILE_ID = "1d0bBWGSXWiQqFDGyi29u8dI0KV73sxJM"  # Replace with your actual file ID
+
+if not os.path.exists(MODEL_PATH):
+    gdown.download(f"https://drive.google.com/uc?id={GOOGLE_DRIVE_FILE_ID}", MODEL_PATH, quiet=False)
+
+from keras.models import load_model
+model = load_model(MODEL_PATH, compile=False)
+
 class_labels = ['Angry', 'Happy', 'Neutral', 'Sad', 'Surprise', 'disgust', 'fear']
 img_size = (224, 224)
 
