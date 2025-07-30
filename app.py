@@ -11,9 +11,8 @@ from PIL import Image
 # Load the model and define labels
 import os
 import gdown
-
 MODEL_PATH = "best_model.h5"
-GOOGLE_DRIVE_FILE_ID = "1d0bBWGSXWiQqFDGyi29u8dI0KV73sxJM"  # Replace with your actual file ID
+GOOGLE_DRIVE_FILE_ID = "1AVrwp1LAr60YnrUQwL4d2xHAiXBXxH2y"  # Replace with your actual file ID
 
 if not os.path.exists(MODEL_PATH):
     gdown.download(f"https://drive.google.com/uc?id={GOOGLE_DRIVE_FILE_ID}", MODEL_PATH, quiet=False)
