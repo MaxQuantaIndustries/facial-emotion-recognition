@@ -9,7 +9,7 @@ from keras.models import load_model
 from PIL import Image
 
 # Load the model and define labels
-model = load_model("C:/Users/MAXQUANTA-INDUSTRIES/Desktop/ER-2/E-3/best_model.h5")
+model = load_model("best_model.h5")
 class_labels = ['Angry', 'Happy', 'Neutral', 'Sad', 'Surprise', 'disgust', 'fear']
 img_size = (224, 224)
 
