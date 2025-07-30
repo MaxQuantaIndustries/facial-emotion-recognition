@@ -8,3 +8,5 @@ plotly
 pandas
 tensorflow
 keras
+gdown
+opencv-python
